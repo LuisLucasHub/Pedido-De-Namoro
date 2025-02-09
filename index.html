@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Especial</title>
+    <link rel="icon" href="love.jpg" type="image/png">
+    <style>
+        body {
+            background-color: #ffcccc;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        input {
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #ff6666;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff6666;
+            color: white;
+            font-size: 18px;
+            padding:  10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ff4d4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Digite o nome do seu amor ❤️</h1>
+        <form id="form" onsubmit="return enviarFormulario();">
+            <input type="text" id="nomeCrush" name="nomeCrush" placeholder="Nome da pessoa" required>
+            <br>
+            <button type="submit">Continuar</button>
+        </form>
+    </div>
+
+    <script>
+        function enviarFormulario() {
+            const nomeCrush = document.getElementById('nomeCrush').value;
+            window.location.href = `carta.html?nomeCrush=${encodeURIComponent(nomeCrush)}`;
+            return false; 
+        }
+    </script>
+</body>
+</html>
